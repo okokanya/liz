@@ -74,20 +74,25 @@ var allImages = document.querySelectorAll('img');
 console.log(allImages);
 for (var d = 0; d < allImages.length; d++) {
     if(d === 1) {
-        allImages[d].setAttribute('data-aos', 'fade-up');
+        allImages[d].setAttribute('data-aos', 'fade-up-right');
+        allImages[d].setAttribute('data-aos-delay', '1800');
+
     }
 
     if(d === 2) {
-        allImages[d].setAttribute('data-aos', 'fade-right');
+        allImages[d].setAttribute('data-aos', 'fade-down-left');
+        allImages[d].setAttribute('data-aos-delay', '600');
     }
     if(d % 3 == 0) {
-        allImages[d].setAttribute('data-aos', 'fade-down');
+        allImages[d].setAttribute('data-aos', 'fade-up-left');
+        allImages[d].setAttribute('data-aos-delay', '1200');
     }
 
 
-    // if(d % 5 == 1) {
-    //     allImages[d].setAttribute('data-aos', 'fade-up');
-    // }
+    if(d % 5 == 1) {
+        allImages[d].setAttribute('data-aos', 'fade-down-right');
+        allImages[d].setAttribute('data-aos-delay', '1400');
+    }
     // allImages[d].setAttribute('data-aos', 'fade-up');
     allImages[d].setAttribute('data-aos-delay', '800');
 }
